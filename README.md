@@ -167,7 +167,7 @@ To validate the payload:
 
 Review the developer documentation to learn how to build your app and start sending messages. [See documentation](https://developers.facebook.com/docs/whatsapp/cloud-api).
 
-## Step 6: Integrate AI into the Application
+## Step 6: Integrate AI into the Application using GPT
 
 Now that we have an end to end connection, we can make the bot a little more clever then just shouting at us in upper case. All you have to do is come up with your own `generate_response()` function in [whatsapp_utils.py](https://github.com/daveebbelaar/python-whatsapp-bot/blob/main/app/utils/whatsapp_utils.py).
 
@@ -178,6 +178,18 @@ If you want a cookie cutter example to integrate the OpenAI Assistans API with a
 4. Update [openai_service.py](https://github.com/daveebbelaar/python-whatsapp-bot/blob/main/app/services/openai_service.py) to your use case.
 5. Import `generate_reponse` into [whatsapp_utils.py](https://github.com/daveebbelaar/python-whatsapp-bot/blob/main/app/utils/)
 6. Update `process_whatsapp_message()` with the new `generate_reponse()` function.
+   
+## Step 7: OR Integrate AI into the Application GEMNI PRO with LangChain
+
+Now that we have an end to end connection, we can make the bot a little more clever then just shouting at us in upper case. All you have to do is come up with your own `generate_response()` function in [whatsapp_utils.py](https://github.com/daveebbelaar/python-whatsapp-bot/blob/main/app/utils/whatsapp_utils.py).
+
+If you want a cookie cutter example to integrate the OpenAI Assistans API with a retrieval tool, then follow these steps.
+1. Watch this video: [PDF Documents With Langchain And Google Gemini Pro](https://www.youtube.com/watch?v=uus5eLz6smA&t=1072s)
+2. Create your own assistant with GEMNI PRO and update your `GOOGLE_API_KEY` in the environment variables.
+3. Provide your assistant with data and instructions
+4. Import `user_iput` into [whatsapp_utils.py](https://github.com/daveebbelaar/python-whatsapp-bot/blob/main/app/utils/)
+6. Update `process_whatsapp_message()` with the new `generate_reponse()` function.
+
 
 ## Step 7: Add a Phone Number
 
